@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Form - Code108Labs</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/form.index.css' %}" />
+    <script defer src="{% static 'js/form.js' %}"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>FORM</h1>
+
+      <form class="form" action="{% url 'submit' %}" method="post">
+        {% csrf_token %}
+
+        <div class="f_row">
+          <label for="username-inp">Username</label>
+          <input
+            id="username-inp"
+            class="inp_full"
+            type="text"
+            name="username"
+            placeholder="johndoe"
+            minlength="5"
+            maxlength="25"
+            required
+          />
+        </div>
+
+        <div class="f_row">
+          <label for="name-inp">Name</label>
+          <input
+            id="name-inp"
+            class="inp_full"
+            type="text"
+            name="name"
+            placeholder="John Doe"
+            required
+          />
+        </div>
+
+        <div class="f_row">
+          <label>Skills</label>
+          <input type="hidden" name="skills" />
+
+          <div class="skills_cont">
+            <span class="skills_wrp"></span>
+            <button class="add_skill" type="button">Add Skill</button>
+          </div>
+        </div>
+
+        <div class="f_row">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

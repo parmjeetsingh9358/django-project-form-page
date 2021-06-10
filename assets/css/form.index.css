@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  color: inherit;
+  font: inherit;
+}
+
+body {
+  background: #0a1d37;
+  font-family: sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 100px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.form {
+  margin-top: 32px;
+  padding: 16px;
+  background: #ffeedb;
+  border-radius: 16px;
+}
+
+.form .f_row {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form .f_row label {
+  font-size: 14px;
+  color: grey;
+}
+
+.form input {
+  margin-top: 8px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px #0002;
+}
+.form input.inp_full {
+  width: 500px;
+}
+/* .form input.inp_small {
+  width: 100px;
+  margin-top: 12px;
+  margin-right: 16px;
+} */
+.form input:focus {
+  box-shadow: 0 0 0 1px #000;
+}
+
+.form .skills_wrp {
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.form .skill {
+  margin-top: 12px;
+  margin-right: 16px;
+  padding: 12px 16px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #0a1d37;
+}
+
+.form input.inactive {
+  display: none;
+}
+
+.form button {
+  padding: 12px 16px;
+  background: #0a1d37;
+  border-radius: 8px;
+  color: white;
+}
+
+.f_row .add_skill {
+  margin-top: 12px;
+}
