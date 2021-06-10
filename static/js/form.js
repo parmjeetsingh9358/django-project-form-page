@@ -30,10 +30,10 @@ form.addEventListener("submit", function (event) {
     return;
   }
 
-  if (!/^[a-zA-Z0-9_,-]+$/.test(skillsInp.value)) {
-    alert("Skills invalid!");
-    return;
-  }
+  // if (!/^[a-zA-Z0-9_,-]+$/.test(skillsInp.value)) {
+  //   alert("Skills invalid!");
+  //   return;
+  // }
 
   form.submit();
 });
