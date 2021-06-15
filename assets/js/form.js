@@ -10,7 +10,7 @@ function onAddSkill() {
   var skill = prompt("Enter Skill:");
 
   if (skill) {
-    skillsInp.value += ", " + skill;
+    skillsInp.value += (skillsInp.value ? ", " : "") + skill;
     skillsCont.innerHTML += '<span class="skill">' + skill + "</span>";
   }
 }
@@ -30,10 +30,10 @@ form.addEventListener("submit", function (event) {
     return;
   }
 
-  if (!/^[a-zA-Z0-9_-,]+$/.test(skillsInp.value)) {
-    alert("Skills invalid!");
-    return;
-  }
+  // if (!/^[a-zA-Z0-9_,-]+$/.test(skillsInp.value)) {
+  //   alert("Skills invalid!");
+  //   return;
+  // }
 
   form.submit();
 });
