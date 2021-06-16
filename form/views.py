@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 from form.models import Form
 
 BASE_TEMPLATE_DIR = 'form'
@@ -7,6 +8,15 @@ BASE_TEMPLATE_DIR = 'form'
 def index(request):
     data = Form.objects.all()
     return render(request, f'{BASE_TEMPLATE_DIR}/index.html')
+
+
+def checkuser(request):
+    username = request.GET['username']
+    
+    if len(Form.objects.filter(username=username)):
+        return HttpResponse('yes')
+    else:
+        return HttpResponse('no')
 
 
 def submit(request):
